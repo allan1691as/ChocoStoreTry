@@ -1,0 +1,123 @@
+.logo{
+    width:100%;
+    height: 500px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color:#DBEBEB;
+    }
+.livelas{
+    width:170px;
+    height: 70px;
+    position: absolute;
+    margin:100px 0;
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+      }
+.vela{
+    width: 10px;
+    height: 20px;
+    background: yellow;
+    border-radius: 95% 15% 50% 50%;
+    position: relative;
+    animation: flama 2s ease-in-out infinite;
+}
+.vela::before{
+    content: "";
+    position: absolute;
+    width:5px;
+    height: 15px;
+    background: #fff;
+    margin:20px 2px;
+    border-radius: 2px;
+}
+@keyframes flama{
+    0%,100%{
+        border-radius: 95% 15% 50% 50%;
+    }
+    50%{
+        border-radius:15% 95% 50% 50%;
+    }
+}
+.livelas .vela:nth-child(2){
+    margin:13px 0;
+    animation-delay:1.5s;
+}
+.livelas .vela:nth-child(4){
+    margin:13px 0;
+    animation-delay:1.2s;
+}
+.livelas .vela:nth-child(6){
+    margin:13px 0;
+    animation-delay:1.8s;
+}
+.cake{
+    margin:100px 0;
+    width: 200px;
+    height: 110px;
+    border-radius:40%;
+   background: rgb(249, 252, 199);
+    position:absolute;
+    z-index:20;
+    box-shadow: 2px 20px 1px rgb(249, 252, 199);
+    border: 3px solid rgb(243, 235, 185);
+    }
+ .cake::before{
+    margin: -4px 0;
+    content: "";
+    position: absolute;
+    width: 200px;
+    height:70px;
+    border-radius: 50%;
+    background:rgb(108, 27, 27);
+ }
+ .boxtittle{
+     width: 180px;
+     height: 42px;
+     border: 2px solid gold; 
+     position: absolute;  
+     margin:270px 0;
+     z-index: 11;
+     color:brown;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: rotateX(35deg);
+     background:goldenrod;
+     border-radius: 15px;
+     font-family:'Dancing Script', cursive;;
+}   
+.plate{
+    width:250px;
+    height: 160px;
+    border-radius:15px;
+    border: 5px solid rgb(204, 168, 99);
+    position: relative;
+   /* background-color:rgb(59, 59, 100);*/
+   background:rgb(213, 178, 113);
+    z-index: 10;
+    margin:100px 0;
+    position: absolute;
+    box-shadow:10px 45px 5px rgb(204, 168, 99);
+    }
+.plate2{
+    width:280px;
+    height: 180px;
+   border-radius:35px 35px 20px 20px;
+  margin:130px 0; 
+  border: 5px solid rgb(204, 168, 99);
+  background:rgb(213, 178, 113);
+  /*background:rgb(59, 59, 100);*/
+}
+@media(max-width:800px){
+    .logo{
+       width:100%;
+      /*margin:15px 65px;*/
+    }
+    .boxtittle h2 {
+        font-size:25px;
+    }
+}
